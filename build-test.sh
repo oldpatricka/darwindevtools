@@ -14,6 +14,8 @@ for file in `cat ${GCC_TEST}` ; do
         EXISTS=$?
         if [ $EXISTS -ne 0 ]; then
             echo "$PREFIX/$file is missing"
+        else
+            echo "$PREFIX/$file is OK"
         fi
 done
 
@@ -24,5 +26,7 @@ for file in `cat ${DEVTOOLS_TEST}` ; do
         EXISTS=$?
         if [ $EXISTS -ne 0 ]; then
             echo "$PREFIX/$file is missing"
+        else
+            echo "$PREFIX/$file is OK"
         fi
 done
